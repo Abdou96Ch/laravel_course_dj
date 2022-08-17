@@ -16,7 +16,7 @@
                     <p class="card-text">{{ $post->body}}</p>
                     </div>
                     <!-- Bouton pour modifier le post -->
-                    <a href="" class="btn btn-warning  mb-2">Modifier</a>
+                    <a href="{{ route('post.edit', $post->slug)}}" class="btn btn-warning  mb-2">Modifier</a>
                     
                     <!-- On ajoute un formulaire pour la suppression pour y confirmer -->
                     <form id = "{{$post->id}}" action="" method="post">
