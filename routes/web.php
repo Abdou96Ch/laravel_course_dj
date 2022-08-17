@@ -14,5 +14,7 @@ use App\Http\Controllers\HomeController ;
 |
 */
 
-// Route::get('/', function () {return view('welcome');});
-Route::get('/home', [HomeController::class ,'index']);
+Route::get('/', [HomeController::class ,'index']);
+Route::get('/post/{id}', 'HomeController@show')->name('post.show');
+Route::get('/create/post', 'HomeController@create')->name('post.create');
+Route::post('/add/post', 'HomeController@store')->name('post.store');
