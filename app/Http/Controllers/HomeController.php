@@ -90,7 +90,7 @@ class HomeController extends Controller
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'body' => $request->body,
-            'image' => $post->image
+            'image' => $post->image 
         ]);
         echo("Post modifié");
         return redirect('/')->with(['success'=>'Le post est modifié avec succès']);
